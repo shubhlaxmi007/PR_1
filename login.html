@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>E-commerce Website Single Product</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="top-nav-bar">
+
+
+<a href="index.html" class="navbar-brand">
+Grocery
+</a>
+
+
+
+
+
+<div class="menu-bar">
+<ul>
+<li><a href="#"><i class="fa fa-shopping-basket"></i>Cart</a></li>
+<li><a href="file:///F:/shop/signup.html?">Sign Up</a></li>
+<li><a href="#">Log In</a></li>
+</ul>
+</div>
+</div>
+
+<!-------------------------------------------------sign-up---------------------------------------------->
+
+<div class="container"><br>
+		
+		<div class="col-lg-6 m-auto d-block">
+			
+			<form action="#" onsubmit="return validation()" class="bg-light">
+				
+				<div class="form-group">
+					<label for="user" class="font-weight-bold"> Username: </label>
+					<input type="text" name="user" class="form-control" id="user" autocomplete="off">
+					<span id="username" class="text-danger font-weight-bold"> </span>
+				</div>
+				<br><br>
+				
+				
+				
+				<div class="form-group">
+					<label class="font-weight-bold"> Password: </label>
+					<input type="text" name="pass" class="form-control" id="pass" autocomplete="off">
+					<span id="passwords" class="text-danger font-weight-bold"> </span>
+				</div>
+				
+				<br>
+				
+				<input type="submit" name="submit" value="submit" class="btn btn-success" 	autocomplete="off">
+				
+				
+			</form><br><br>
+
+
+		</div>
+	
+
+
+
+
+</div>
+
+
+
+<!-----------------------------------------footer--------------------------------------------------------->
+
+<section class="footer">
+<div class="container tex-center">
+	<div class="row">
+		<div class="col-md-3">
+		<h1>Useful Links</h1>
+		<p>Privacy Policy</p>
+		<p>Terms of Use</p>
+		<p>Return Policy</p>
+		<p>Discount Coupons</p>
+
+		</div>
+		<div class="col-md-3">
+		<h1>Comapny</h1>
+		<p><a href="file:///F:/shop/Aboutus.html">About Us</a></p>
+		<p><a href="file:///F:/shop/Contactus.html">Contact Us</a></p>
+		<p>Career</p>
+		<p>Affiliate</p>
+
+		</div>
+		<div class="col-md-3">
+		<h1>Follow Us On</h1>
+		<p><i class="fa fa-facebook-official"></i> Facebook</p>
+		<p><i class="fa fa-youtube-play"></i> Youtube</p>
+		<p><i class="fa fa-linkedin "></i> Linked In</p>
+		<p><i class="fa fa-twitter"></i> Twitter</p>
+
+		</div>
+		<div class="col-md-3 footer-image">
+		<h1>Download App</h1>
+		<img src="images/footer-1.png">
+
+		</div>		
+	</div>
+	<hr>
+	<p class="copyright">Made With<i class="fa fa-heart-o"></i>by Shubham Sharma</p>
+</div>
+</section>
+
+
+<script>
+
+function openmenu()
+{
+	document.getElementById("side-menu").style.display="block";
+	document.getElementById("menu-btn").style.display="none";
+	document.getElementById("close-btn").style.display="block";
+}
+function closemenu()
+{
+	document.getElementById("side-menu").style.display="none";
+	document.getElementById("menu-btn").style.display="block";
+	document.getElementById("close-btn").style.display="none";
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+		
+
+		function validation(){
+
+			var user = document.getElementById('user').value;
+			var pass = document.getElementById('pass').value;
+
+			
+			if(user == ""){
+				document.getElementById('username').innerHTML =" ** Please fill the username field";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+
+			if(pass == ""){
+				document.getElementById('passwords').innerHTML =" ** Please fill the password field";
+				return false;
+			}
+			if((pass.length <= 5) || (pass.length > 20)) {
+				document.getElementById('passwords').innerHTML =" ** Passwords lenght must be between  5 and 20";
+				return false;	
+			}
+		}
+</script>		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
